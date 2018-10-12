@@ -1,0 +1,33 @@
+.messageBoard {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    margin: auto;
+}
+
+.replybtn {
+    max-width: 20%;
+}
+
+.primaryrow {
+    margin-bottom: 15em;
+
+}
+
+.reply {
+    max-width: 60%;
+    margin-left: 5%;
+}
+
+.conformess {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.replymessage {
+    margin-left: 4em;
+}
