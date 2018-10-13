@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Search Recipes</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/recipes.js"></script>
+</head>
+
+
+<body>
+
+<!-- HEADER GOES HERE    
+================================= -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-8">
+            <form>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Enter Ingredients </label>
+                    <input id="ingredients" type="text" class="form-control" placeholder="Use a comma to separate each ingredient">
+                </div>
+                <button id="submitButton" class="btn btn-primary" value="Submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="recipeWrap">
+        <div class="infoRow row">
+            <div class="mediaWrap col-lg-6">
+                <div class="media">
+                    <img class="foodImage align-self-center mr-3" src="https://via.placeholder.com/200x200" alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="recipeName mt-0">Recipe Name</h5>
+                        <p class="servings"># of servings</p>
+                        <p class="label">Nutrition and Health Labels</p>
+                        <p class="ingredients"># of ingredients</p>
+                        <a href="">Link to the Recipe</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 offset-lg-1">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="calHeader">Cal</th>
+                            <th class="proteinHeader">Protein</th>
+                            <th class="sugarHeader">Sugar</th>
+                            <th class="sodiumHeader">Sodium</th>
+                            <th class="fatsHeader">Fats</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="amountHeader">Amount</th>
+                            <td class="calAmount">500</td>
+                            <td class="proteinAmount">20g</td>
+                            <td class="sugarAmount">20g</td>
+                            <td class="sodiumAmount">20g</td>
+                            <td class="fatsAmount">20g</td>
+                        </tr>
+                        <tr>    
+                            <th class="percentHeader">Daily %</th>
+                            <td class="calPercent">10%</td>
+                            <td class="proteinPercent">25%</td>
+                            <td class="sugarPercent">5%</td>
+                            <td class="sodiumPercent">4%</td>
+                            <td class="fatsPercent">2%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+
