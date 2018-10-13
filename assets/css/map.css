@@ -1,0 +1,37 @@
+
+    body {
+      background-color: aliceblue;
+      padding: 30px;
+    }
+
+    #map {
+      width: 55%;
+      height:600px;
+      float: right;
+    }
+
+    #wrapper2 {
+      padding-left: 100px;
+      float: left;
+      width: 35%;
+    }
+
+    #pac-input {
+      height: 30px;
+      width: 350px;
+      font-size: 15px;
+    }
+
+    .btn {
+      height: 500px;
+      width: 100px;
+      font-size: 10cm;
+    }
+
+    #wrapper3 {
+      padding-left: 100px;
+      height: 400px;
+      width: 400px;
+      overflow: scroll;
+    }
+
