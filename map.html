@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/map.css">
+    <title>Places Search Box</title>
+
+  </head>
+  <body>
+
+        <div id="wrapper1">
+            <div id="map"></div>
+        </div>
+
+        <div id="wrapper2">
+            <div id="searchInputDiv">
+                <p> Search GYM or health food store near you</p>
+                <input id="pac-input" class="inpt locationInpt" type="text" placeholder="GYM near Los Angeles">
+                <br><br>
+            </div>
+
+            <div id="searchBtnDiv">
+                <input type="button" class="btn searchBtn" name="search" value="search"> <br>
+            </div>
+        </div>
+
+        <div id="wrapper3">
+            <div id="businessDisplay"></div>
+        </div>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxfSy4LtbFi7DTI6EQlUQ2UGTagyCBl3g&libraries=places&callback=initAutocomplete"
+        async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="assets/javascript/map.js"></script>
+  
+  </body>
+</html>
