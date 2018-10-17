@@ -4,11 +4,55 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/map.css">
-    <title>Places Search Box</title>
+    <title>Map Search Page</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxfSy4LtbFi7DTI6EQlUQ2UGTagyCBl3g&libraries=places&callback=initAutocomplete"
+    async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/map.js"></script>
 
   </head>
   <body>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+                <div class="container">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                      <img src="assets/images/logo.jpg" alt="logo" id="logoImg" height="30">
+                    <a class="navbar-brand" href="index.html" id="logo">SoCal Lifestyle</a>
+                  </div>
+                  <button type="button" class="navbar-toggler collapsed ml-auto" data-toggle="collapse" data-target="#page-nav-collapse" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="nav" id="page-nav-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="recipe.html">Recipe</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="nutritunalFacts.html">Nutritunal Facts</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="map.html">Maps</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="forum.html">Forum</a>
+                        </li>
+                    </ul>
+                  </div>
+                  <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+              </nav>
+              <!-- End of navbar -->
+        <br>    
 
         <div id="wrapper1">
             <div id="map"></div>
@@ -29,11 +73,6 @@
         <div id="wrapper3">
             <div id="businessDisplay"></div>
         </div>
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxfSy4LtbFi7DTI6EQlUQ2UGTagyCBl3g&libraries=places&callback=initAutocomplete"
-        async defer></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="assets/javascript/map.js"></script>
   
   </body>
 </html>

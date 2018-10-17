@@ -7,6 +7,11 @@
     // parameter when you first load the API. For example:
     // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
+        // $("button").on("click", function(){
+
+        // initAutocomplete();
+        // });
+
     function initAutocomplete() {
       var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 34.0522, lng: -118.2437},
@@ -24,7 +29,7 @@
       map.addListener('bounds_changed', function() {
         searchBox.setBounds(map.getBounds());
       });
-      
+
       searchBox.addListener('places_changed', function() {
         var places = searchBox.getPlaces();
         document.getElementById("businessDisplay").innerHTML=""; //clear businessDisplay 
@@ -92,8 +97,8 @@
             bounds.extend(place.geometry.location);
           }
         });
+      // });
         map.fitBounds(bounds);
       });
     }
-  //source: https://www.youtube.com/watch?v=2n_r0NDekgc
-  //source: https://developers.google.com/maps/documentation/javascript/examples/places-searchbox
+
