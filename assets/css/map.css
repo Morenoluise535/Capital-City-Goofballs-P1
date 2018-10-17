@@ -4,10 +4,34 @@
       padding: 30px;
     }
 
+    #logo {
+      font-family: 'Indie Flower', cursive, sans-serif;
+      font-size: 40px;
+      font-weight: 1000;
+      color: green;
+      text-align: center;
+      text-decoration: none;
+      vertical-align:middle;
+      margin-left:20px;
+    }
+    #logoImg {
+      width:60px;
+      height:auto;
+    }
+    .collapse navbar-collapse {
+      float: right;
+    }
+    
+    .navbar-right {
+      float:right;
+    }
+
     #map {
       width: 55%;
       height:600px;
       float: right;
+      padding-right: 100px;
+      margin-right: 100px;
     }
 
     #wrapper2 {
@@ -23,15 +47,15 @@
     }
 
     .btn {
-      height: 500px;
-      width: 100px;
-      font-size: 10cm;
+      height: 35px;
+      width: 80px;
+      font-size: 15px;
     }
 
     #wrapper3 {
       padding-left: 100px;
       height: 400px;
-      width: 400px;
+      width: 500px;
       overflow: scroll;
     }
 
