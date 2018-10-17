@@ -1,14 +1,12 @@
 $(document).ready(function () {
 
-    var ingredients;
-
-    $("#submitButton").on("click", function () {
+    $("#submitButton").on("click", function (event) {
         event.preventDefault();
 
         var queryInput= "";
 
         // Grabs value from form in DOM
-        ingredientInputs = $("#ingredients").val();
+        var ingredientInputs = $("#ingredients").val();
 
         // Splits the string into an array to remove any commas
         ingredientsArray = ingredientInputs.split(",")
@@ -83,10 +81,10 @@ $(document).ready(function () {
                 proteinAmount = Math.round(proteinAmount) + "g";
                 sugarAmount = Math.round(sugarAmountRaw) + "g";
                 fatsAmount = Math.round(fatsAmount) + "g";
-                sodiumAmount = Math.round(sodiumAmount) + "g";
+                sodiumAmount = Math.round(sodiumAmount) + "mg";
                 
                 // Creates various divs to hold information
-                var amountHeader = $("<th>").addClass("amountHeader").html("Amount")
+                var amountHeader = $("<th>").addClass("amountHeader").html("Amount/Serving: ")
                 var calGramDiv = $("<td>").addClass("calAmount").html(calAmount)
                 var proteinGramDiv = $("<td>").addClass("proteinAmount").html(proteinAmount)
                 var sugarGramDiv = $("<td>").addClass("calAmount").html(sugarAmount)
@@ -113,7 +111,7 @@ $(document).ready(function () {
                 sodiumPercent = Math.round(sodiumPercent)
 
                 // Creates various divs to hold information
-                var percentHeader = $("<th>").addClass("percentage").html("Daily %")
+                var percentHeader = $("<th>").addClass("percentage").html("Daily %: ")
                 var calPercentDiv = $("<td>").addClass("calPercent").html(calPercent + "%")
                 var proteinPercentDiv = $("<td>").addClass("proteinPercent").html(proteinPercent + "%")
                 var sugarPercentDiv = $("<td>").addClass("sugarPercent").html(sugarPercent + "%")
