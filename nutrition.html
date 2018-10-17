@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Search Nutrition</title>
+    
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css" media="screen">
+
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/javascript/nutrition.js"></script>
+    </head>
+    
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                    <img src="assets/images/logo.jpg" alt="logo" id="logoImg" height="30">
+                <a class="navbar-brand" href="index.html" id="logo">SoCal Lifestyle</a>
+            </div>
+        
+            <button type="button" class="navbar-toggler collapsed ml-auto" data-toggle="collapse" data-target="#page-nav-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="" id="page-nav-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="recipe.html">Recipe</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="nutritunalFacts.html">Nutritunal Facts</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="mapAPI.html">Maps</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="forum.html">Forum</a>
+                    </li>
+                </ul>
+            </div>
+        
+        <!-- /.navbar-collapse -->
+        </div>
+    <!-- /.container -->
+    </nav>
+    <!-- End of navbar -->
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8">
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Enter Ingredients </label>
+                        <input id="ingredients" type="text" class="form-control" placeholder="Enter a food item to learn its nutrition">
+                    </div>
+                    <button id="submitButton" class="btn btn-primary" value="Submit">Submit</button>
+                    <button id="resetButton" class="btn btn-primary" value="resetSubmit">Reset</button>
+
+                </form>
+            </div>
+        </div>
+
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Calories</th>
+                    <th scope="col">Protein</th>
+                    <th scope="col">Sugar</th>
+                    <th scope="col">Sat Fats</th>
+                    <th scope="col">Mono Fats</th>
+                    <th scope="col">Poly Fats</th>
+                    <th scope="col">Sodium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="blankTR bg-dark">
+                    <td colspan="8"></td>
+                </tr>
+                
+                <tr>
+                    <th scope="row">Amount</th>
+                    <td class="calorieAmount">0</td>
+                    <td class="proteinAmount">0g</td>
+                    <td class="sugarAmount">0g</td>
+                    <td class="satFatsAmount">0g</td>
+                    <td class="monoFatsAmount">0g</td>
+                    <td class="polyFatsAmount">0g</td>
+                    <td class="sodiumAmount">0mg</td>
+                </tr>
+                <tr>
+                    <th scope="row">Daily %</th>
+                    <td class="caloriePercent">0%</td>
+                    <td class="proteinPercent">0%</td>
+                    <td class="sugarPercent">0%</td>
+                    <td class="satFatsPercent">0%</td>
+                    <td class="monoFatsPercent">0%</td>
+                    <td class="polyFatsPercent">0%</td>
+                    <td class="sodiumPercent">0%</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+
+</body>
+</html>
