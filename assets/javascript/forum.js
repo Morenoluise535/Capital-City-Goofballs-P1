@@ -27,7 +27,8 @@ $( document ).ready(function() {
 
         dataRef.ref().push({
             name: name,
-            message: message
+            message: message,
+            replys: []
         });
 
     });
@@ -66,6 +67,8 @@ $( document ).ready(function() {
         event.preventDefault();
         replyname = $("#replyname-input").val().trim()
         replymessage = $("#replymessage-input").val().trim()
+
+        
         
         dataRef.ref().push({
             replyname: replyname,
@@ -74,6 +77,9 @@ $( document ).ready(function() {
 
     })
 
+    dataRef.ref().on("child_added", function(childSnapshot) {
+
+    })
 
     
 });
