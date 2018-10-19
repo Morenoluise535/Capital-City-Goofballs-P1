@@ -7,6 +7,8 @@
         <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css" media="screen">
+        <link rel="stylesheet" href="assets/css/nutrition.css" media="screen">
+        
 
        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -39,7 +41,7 @@
                         <a class="nav-link" href="recipes.html">Recipe</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="nutrition.html">Nutritunal Facts</a>
+                        <a class="nav-link" href="nutrition.html">Nutritional Facts</a>
                     </li>
                     <li>
                         <a class="nav-link" href="map.html">Maps</a>
@@ -59,38 +61,50 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-10">
                 <form>
                     <div class="form-group">
-                        <label for="formGroupExampleInput">Enter Ingredients </label>
-                        <input id="ingredients" type="text" class="form-control" placeholder="Enter a food item to learn its nutrition">
+                        <input id="ingredients" type="text" class="form-control" placeholder="Ex: 1 small apple or 4 oz brown rice" value="">
                     </div>
-                    <button id="submitButton" class="btn btn-primary" value="Submit">Submit</button>
-                    <button id="resetButton" class="btn btn-primary" value="resetSubmit">Reset</button>
-
                 </form>
+            </div>
+
+            <div class="col-lg-1">
+                <button id="submitButton" class="btn" value="Submit">Submit</button>
+            </div>
+            <div class="col-lg-1">
+                <button id="resetButton" class="btn" value="resetSubmit">Reset</button>
             </div>
         </div>
 
-        <table class="table table-borderless">
-            <thead>
+        <div id="mainComponent" class="row">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="assets/images/rawItems.jpg" alt="nutritionMainImage">
+            </div>
+            <div class="col-lg-6">
+                <p id="mainText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead class="tableHeader">
                 <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Calories</th>
-                    <th scope="col">Protein</th>
-                    <th scope="col">Sugar</th>
-                    <th scope="col">Sat Fats</th>
-                    <th scope="col">Mono Fats</th>
-                    <th scope="col">Poly Fats</th>
-                    <th scope="col">Sodium</th>
+                    <th scope="col">ITEM</th>
+                    <th scope="col">CALORIES</th>
+                    <th scope="col">PROTEIN</th>
+                    <th scope="col">SUGAR</th>
+                    <th scope="col">SAT FATS</th>
+                    <th scope="col">MONO FATS</th>
+                    <th scope="col">POLY FATS</th>
+                    <th scope="col">SODIUM</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="blankTR bg-dark">
+                <!-- <tr class="blankTR">
                     <td colspan="8"></td>
-                </tr>
+                </tr> -->
                 
-                <tr>
+                <tr class="amountRow">
                     <th scope="row">Amount</th>
                     <td class="calorieAmount">0</td>
                     <td class="proteinAmount">0g</td>

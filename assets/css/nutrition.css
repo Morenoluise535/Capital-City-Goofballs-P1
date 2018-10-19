@@ -23,32 +23,35 @@ div.form-group {
     -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
-#submitButton {
+#submitButton, #resetButton {
     margin-top: 55px;
     background-color: #4f7a0d;
     color: white;
 }
 
-#submitButton:active {
+#submitButton:active, #resetButton:active {
     outline: none;
     border: none;
 }
 
-#mainComponent {
-    margin-top: 50px;
+.amountRow {
+    border-top: 2px solid;
+    border-top-color: #4f7a0d;
 }
 
-.infoRow.row {
-    margin-bottom: 25px;
-}
-
-th {
-    font-weight: bold;
-}
-
-.headings {
+.tableHeader {
     background-color: #4f7a0d;
     color: white;
+}
+
+.table td, .table th, .table thead th  {
+    border-right: 1px solid #4f7a0d;
+    border-bottom: none;
+    border-top: none;
+}
+
+#mainComponent {
+    margin-top: 50px;
 }
 
 .navbar-light .navbar-nav .nav-link {
