@@ -12,25 +12,26 @@ $( document ).ready(function() {
 
       var dataRef = firebase.database();
 
-    replynum = 0
+    replynum = 0;
 
-    var name = ""
-    var message = ""
+    var name = "";
+    var message = "";
 
 
     $(".sendbtnprim").on('click', function(event){
-        event.preventDefault()
-        replynum++
+        event.preventDefault();
+        replynum++;
     
         name = $("#name-input").val().trim();
         message = $("#message-input").val().trim();
 
         dataRef.ref().push({
             name: name,
-            message: message
-        })
+            message: message,
+            replys: []
+        });
 
-    })
+    });
 
     dataRef.ref().on("child_added", function(childSnapshot) {
         // console.log(childSnapshot.val().name);
@@ -40,16 +41,48 @@ $( document ).ready(function() {
                                 "<p>" + childSnapshot.val().message+ "</p>"+
                                 "<div id='replymess'></div>"+
                                 "<div id='replyform'></div>"+
-                                "<button id='replytbn'>Reply</button>"+
+                                "<button class='replybtn'>Reply</button>"+
                                 "</div>")
+    });
+    $(document).on('click',".replybtn", function(event){
+        event.preventDefault();
+        console.log("hi");
+        var replyform = $(  "<div class='conformess'>"+
+                            "<form>"+
+                            "<div class='form-group' style='width: 50%'>"+
+                            "<label for='replyname-input'></label>"+
+                            "<input type='name' class='form-control' id='replyname-input' placeholder='Display Name'>"+
+                            "</div>"+
+                            "<div class='form-group' style='width: 75%'>"+
+                            "<label for='replymessage-input'></label>"+
+                            "<textarea class='form-control' id='replymessage-input' rows='3' placeholder='Message'></textarea>"+
+                            "</div>"+
+                            "<button class='replysendbtn' data-renum="+replynum+">Send</button>"+
+                            "</form>"+
+                            "</div>)")
+        $($(this).parent().find("#replyform")).html(replyform) 
+    });
+    
+    $(document).on('click',".replysendbtn", function(event){
+        event.preventDefault();
+        replyname = $("#replyname-input").val().trim()
+        replymessage = $("#replymessage-input").val().trim()
+
+        
+        
+        dataRef.ref().push({
+            replyname: replyname,
+            replymessage: replymessage
+        })
+
     })
 
-    $("#replytbn").on('click', function(event){
-        event.preventDefault();
-        
+    dataRef.ref().on("child_added", function(childSnapshot) {
+
     })
-                    
-})
+
+    
+});
 
 
 // var chatreplymess = $("<div class='conformess f"+replynum+"'>"+

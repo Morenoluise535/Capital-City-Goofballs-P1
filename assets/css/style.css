@@ -1,6 +1,6 @@
 #logo {
   font-family: 'Indie Flower', cursive, sans-serif;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 1000;
   color: green;
   text-align: center;
@@ -14,17 +14,20 @@
 }
 .collapse navbar-collapse {
   float: right;
+  
 }
 
 
 .navbar-right {
-	float:right;
+  float:right;
+  font-size: 20px;
+  
 }
 
 
 #photos {
   /* Prevent vertical gaps */
-  margin-top:50px;
+  margin-top:30px;
   line-height: 0;
    
   -webkit-column-count: 5;

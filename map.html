@@ -8,9 +8,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/map.css">
     <title>Map Search Page</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
     <script src="assets/javascript/map.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxfSy4LtbFi7DTI6EQlUQ2UGTagyCBl3g&libraries=places&callback=initAutocomplete"
     async defer></script>
+
+    
 
 
   </head>
@@ -22,12 +25,6 @@
                       <img src="assets/images/logo.jpg" alt="logo" id="logoImg" height="30">
                     <a class="navbar-brand" href="index.html" id="logo">SoCal Lifestyle</a>
                   </div>
-                  <button type="button" class="navbar-toggler collapsed ml-auto" data-toggle="collapse" data-target="#page-nav-collapse" aria-expanded="false">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="nav" id="page-nav-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -38,7 +35,7 @@
                             <a class="nav-link" href="recipes.html"><strong>Recipes</strong></a>
                         </li>
                         <li>
-                            <a class="nav-link" href="nutritunalFacts.html"><strong>Nutritunal Facts</strong></a>
+                            <a class="nav-link" href="nutrition.html"><strong>Nutritunal Facts</strong></a>
                         </li>
                         <li>
                             <a class="nav-link" href="map.html"><strong>Maps</strong></a>
@@ -67,9 +64,15 @@
                 <br><br>
             </div>
 
-            <div id="searchBtnDiv">
-                <input type="button" class="btn searchBtn" name="search" value="search"> <br>
-            </div>
+            <div id="buttonSection">
+                <div id="searchBtnDiv">
+                    <input type="button" class="btn" id="searchBtn" name="search" value="search"> <br>
+                </div>
+            
+                <div id="drivingDirections">
+                    <a href="https://www.google.com/maps">Driving Directions</a>
+                </div>
+            </div> 
         </div>
 
         <div id="wrapper3">
