@@ -1,0 +1,50 @@
+#ingredients {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 100;
+    background-color: white;
+}
+
+div.form-group {
+    margin-top: 50px;
+}
+
+#ingredients:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: white;
+}
+
+#ingredients:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+#submitButton {
+    margin-top: 55px; 
+}
+
+#submitButton:active {
+    outline: none;
+    border: none;
+}
+
+#mainComponent {
+    margin-top: 50px;
+}
+
+.infoRow.row {
+    margin-bottom: 25px;
+}
+
+th {
+    font-weight: bold;
+}
+
+.headings {
+    background-color: green;
+    color: white;
+}
