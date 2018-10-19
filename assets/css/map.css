@@ -1,6 +1,6 @@
 
     body {
-      background-color: azure;
+      background-color: aliceblue;
       padding: 30px;
     }
 
@@ -48,6 +48,7 @@
     #wrapper2 {
       padding-top: 5px;
       padding-left: 100px;
+      padding-right: 10px;
       float: left;
       width: 35%;
     }
@@ -59,15 +60,40 @@
     }
 
     .btn {
+      float: left;
       height: 35px;
       width: 80px;
       font-size: 15px;
     }
 
+    #drivingDirections {
+      padding-left: 60px;
+      float: left;
+      font-weight: bold;
+      position: absolute;
+      top: 290px;
+      left: 250px;
+      font-size: 18px;
+    }
+
+    a {
+      color: black;
+    }
+
+    a:hover {
+      color: blue;
+    }
+
     #wrapper3 {
+      padding-top: 30px;
       padding-left: 100px;
-      height: 500px;
+      padding-right: 10px;
+      height: 400px;
       width: 500px;
       overflow: scroll;
     }
 
+    .business-name {
+      font-weight: bold;
+      size: 1000px;
+    }

@@ -9,7 +9,7 @@
 
         // $("button").on("click", function(){
 
-        // initAutocomplete();
+        //   window.initAutocomplete();
         // });
 
      window.initAutocomplete = function() {
@@ -66,7 +66,7 @@
           
             //push marker to array of markers[] with bubble
             markers.push(marker);
-            var bubbleContent = place.name + " <br />" + place.formatted_address;
+            var bubbleContent = "<div class='business-name'>" + place.name +"</div>" + place.formatted_address;
             infowindow = new google.maps.InfoWindow({
               content:bubbleContent
           })
@@ -75,8 +75,8 @@
           
           //creating div to each place/address and append to businessDisplayDiv
           var item=document.createElement("div");
-          item.innerHTML+="<p>"+place.name+"</p>";
-          item.innerHTML+="<p>"+place.formatted_address+"</p>";
+          item.innerHTML+="<div class='business-name'>"+place.name+"</div>";
+          item.innerHTML+="<div>"+place.formatted_address+"</div>";
           document.getElementById("businessDisplay").appendChild(item);
 
           //onclick business name/address, invoke infowindow on map's marker
@@ -97,7 +97,7 @@
             bounds.extend(place.geometry.location);
           }
         });
-      // });
+
         map.fitBounds(bounds);
       });
     }
