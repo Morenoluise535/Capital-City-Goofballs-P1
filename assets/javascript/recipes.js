@@ -3,6 +3,8 @@ $(document).ready(function () {
     $("#submitButton").on("click", function (event) {
         event.preventDefault();
 
+        $("#mainComponent").empty();
+
         var queryInput= "";
 
         // Grabs value from form in DOM
@@ -84,7 +86,7 @@ $(document).ready(function () {
                 sodiumAmount = Math.round(sodiumAmount) + "mg";
                 
                 // Creates various divs to hold information
-                var amountHeader = $("<th>").addClass("amountHeader").html("Amount/Serving: ")
+                var amountHeader = $("<th>").addClass("amountHeader").html(" Per Serving: ")
                 var calGramDiv = $("<td>").addClass("calAmount").html(calAmount)
                 var proteinGramDiv = $("<td>").addClass("proteinAmount").html(proteinAmount)
                 var sugarGramDiv = $("<td>").addClass("calAmount").html(sugarAmount)
@@ -137,8 +139,8 @@ $(document).ready(function () {
                 var headerWrap = $("<thead>").addClass("headerWrap").append(headings)
 
                 // Creates the table and appends both table head and table body
-                var table = $("<table>").addClass("table").append(headerWrap).append(numberWrap);
-                var tableWrap = $("<div>").addClass("tableWrap col-lg-4 offset-lg-1").append(table)
+                var table = $("<table>").addClass("table col-lg-5").append(headerWrap).append(numberWrap);
+                var tableWrap = $("<div>").addClass("tableWrap col-lg-4").append(table)
 
                 // Appends all the content and table divs into the overall wrapper
                 var infoRow = $("<div>").addClass("infoRow row").append(mediaWrap).append(tableWrap);

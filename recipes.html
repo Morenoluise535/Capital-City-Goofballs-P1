@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" media="screen">
+    <link rel="stylesheet" href="assets/css/recipes.css" media="screen">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/recipes.js"></script>
@@ -60,14 +61,25 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-11">
             <form>
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Enter Ingredients </label>
+                    <!-- <label for="formGroupExampleInput">Enter Ingredients </label> -->
                     <input id="ingredients" type="text" class="form-control" placeholder="Use a comma to separate each ingredient">
                 </div>
-                <button id="submitButton" class="btn btn-primary" value="Submit">Submit</button>
             </form>
+        </div>
+        <div class="col-lg-1">
+            <button id="submitButton" class="btn btn-success" value="Submit">Submit</button>
+        </div>
+    </div>
+
+    <div id="mainComponent" class="row">
+        <div class="col-lg-6">
+            <img class="img-fluid" src="assets/images/recipe_main_pic.jpg" alt="recipeMainImage">
+        </div>
+        <div class="col-lg-6">
+            <p id="mainText">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
         </div>
     </div>
 
