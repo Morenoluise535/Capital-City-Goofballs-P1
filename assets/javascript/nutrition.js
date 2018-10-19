@@ -18,24 +18,23 @@ $(document).ready(function () {
 
     $(".table").hide()    
 
-
     $("#submitButton").on("click", function (event) { 
         event.preventDefault();
-
-
+       
+        $("#mainComponent").empty();
+        
         var queryInputRaw = "";
         
         queryInputRaw = $("#ingredients").val().trim();
         queryInput = queryInputRaw.replace(/ /g,"+")
 
         var queryURL = "https://api.edamam.com/api/nutrition-data?app_id=bb96e2ef&app_key=3a2f56dfc5a55247b0c4c6b9706a1e99&ingr=" + queryInput;
-        
-        
+
         $.ajax({
             url: queryURL,
             method: "GET"
         })
-        
+
         .then(function(response) {
 
             var ingredient = queryInputRaw;
@@ -115,7 +114,7 @@ $(document).ready(function () {
             sodiumAmount = sodiumAmount + sodium;
 
             //Grabs specific classes to pass info to as well as limiting number to two decimal places
-            $(".calorieAmount").html(caloriesAmount.toFixed(2) + "g")
+            $(".calorieAmount").html(caloriesAmount.toFixed(2))
             $(".proteinAmount").html(proteinAmount.toFixed(2) + "g")
             $(".sugarAmount").html(sugarAmount.toFixed(2) + "g")
             $(".satFatsAmount").html(satFatsAmount.toFixed(2) + "g")
@@ -152,12 +151,27 @@ $(document).ready(function () {
 
             $(".table").show();
 
-        })
-    
+
+
+        })    
+  
     })
 
     $("#resetButton").on("click", function() {
         window.location.reload();
+    })
+   
+    $("input").change(function(){
+
+        var test = $("input").val()
+        console.log(test)
+
+        $("input").on("click", function (){
+            if (test !== ""){
+                $("input").val("")
+            }
+            
+        })
     })
 
 

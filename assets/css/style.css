@@ -42,9 +42,14 @@
 }
 
 
+.navbar-light .navbar-nav .nav-link {
+  color: #4f7a0d;
+}
 
-
-
+.navbar-light:hover .navbar-nav:hover .nav-link:hover {
+  font-weight: bold;
+  color: #4f7a0d;
+}
 
 
 
