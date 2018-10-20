@@ -37,6 +37,7 @@ $( document ).ready(function() {
                                 "<div id='replyform'></div>"+
                                 "<button class='replybtn' data-renum='"+replynum+"'>Reply</button>"+
                                 "</div>")
+          $('#mart').remove()
 
         var form = document.getElementById('formone')
         var domelement = form.outerHTML
@@ -47,6 +48,7 @@ $( document ).ready(function() {
     });
     $(document).on('click',".replybtn", function(event){
         event.preventDefault();
+        $('#mart').remove()
         // console.log("hi");
         var replyform = $(  "<div class='conformess' id='mart'>"+
                             "<form>"+
