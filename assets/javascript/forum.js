@@ -78,13 +78,16 @@ $( document ).ready(function() {
         
 
         $($(this).parentsUntil(".bard").parent().find("#replymess")).append(replybob);
-        
+        $('#mart').remove()
         var form = document.getElementById('formone');
         var domelement = form.outerHTML
+        
+        $('#mart').remove()
 
         database.ref().set({
             domelement: domelement,
         })
+        
         $('#mart').remove()
         
     })
