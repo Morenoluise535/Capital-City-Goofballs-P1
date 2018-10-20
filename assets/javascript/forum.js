@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     // console.log(document)
-
+    $('#mart').remove()
     var config = {
         apiKey: "AIzaSyA_PG1mk0sWlcIOU1E5BAA0EVDHEdqvlmI",
         authDomain: "ccgproject1-d5fba.firebaseapp.com",
@@ -38,6 +38,7 @@ $( document ).ready(function() {
                                 "<div id='replyform'></div>"+
                                 "<button class='replybtn' data-renum='"+replynum+"'>Reply</button>"+
                                 "</div>")
+          $('#mart').remove()
 
         var form = document.getElementById('formone')
         var domelement = form.outerHTML
@@ -49,7 +50,9 @@ $( document ).ready(function() {
     $(document).on('click',".replybtn", function(event){
         event.preventDefault();
         $('#mart').remove()
+
         ocument.getElementById('mart').remove()
+
         // console.log("hi");
         var replyform = $(  "<div class='conformess' id='mart'>"+
                             "<form>"+
@@ -101,9 +104,14 @@ $( document ).ready(function() {
     database.ref().on("value", function(snapshot){
         $("#formone").replaceWith($(snapshot.val().domelement))
         $('#mart').remove()
+
         document.getElementById('mart').remove()
     })
     document.getElementById('mart').remove()
     $('#mart').remove()
  
+
+    })
+    $('#mart').remove()
+
 });
