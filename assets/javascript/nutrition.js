@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     //Declares and initializes variables needed later
     var caloriesAmount = 0;
@@ -18,7 +18,7 @@ $(document).ready(function () {
 
     $(".table").hide()    
 
-    $("#submitButton").on("click", function (event) { 
+    $("#submitButton").on("click", function(event) { 
         event.preventDefault();
        
         $("#mainComponent").empty();
@@ -91,7 +91,7 @@ $(document).ready(function () {
             
 
             //Creates table columns for each nutrition stat as well as fixes number to two decimal places
-            var ingredientDiv = $("<td>").addClass("ingredient trash").html(ingredient);
+            var ingredientDiv = $("<td>").addClass("ingredient trash itemBorder").html(ingredient);
             var caloriesDiv = $("<td>").addClass("calories").html(calories.toFixed(2));
             var proteinDiv = $("<td>").addClass("protein").html(protein.toFixed(2) + "g");
             var sugarDiv = $("<td>").addClass("sugar").html(sugar.toFixed(2) + "g")
@@ -157,16 +157,19 @@ $(document).ready(function () {
   
     })
 
-    $("#resetButton").on("click", function() {
+    $("#resetButton").on("click", function(event) {
+        event.preventDefault();
         window.location.reload();
     })
    
-    $("input").change(function(){
+    $("input").change(function(event) {
+        event.preventDefault();
 
         var test = $("input").val()
         console.log(test)
 
-        $("input").on("click", function (){
+        $("input").on("click", function(event) {
+            event.preventDefault();
             if (test !== ""){
                 $("input").val("")
             }

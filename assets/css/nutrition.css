@@ -45,9 +45,13 @@ div.form-group {
 }
 
 .table td, .table th, .table thead th  {
-    border-right: 1px solid #4f7a0d;
     border-bottom: none;
     border-top: none;
+}
+
+.itemBorder {
+    border-right: 1px solid #4f7a0d;
+
 }
 
 #mainComponent {
