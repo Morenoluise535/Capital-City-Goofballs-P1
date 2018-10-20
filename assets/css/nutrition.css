@@ -19,9 +19,9 @@ div.form-group {
     background-color: white;
 }
 
-#ingredients:-webkit-autofill {
+/* #ingredients:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px white inset;
-}
+} */
 
 #submitButton, #resetButton {
     margin-top: 55px;
