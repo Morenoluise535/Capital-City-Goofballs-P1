@@ -47,6 +47,7 @@ $( document ).ready(function() {
     });
     $(document).on('click',".replybtn", function(event){
         event.preventDefault();
+        $('#mart').remove()
         // console.log("hi");
         var replyform = $(  "<div class='conformess' id='mart'>"+
                             "<form>"+
@@ -94,7 +95,9 @@ $( document ).ready(function() {
 
     database.ref().on("value", function(snapshot){
         $("#formone").replaceWith($(snapshot.val().domelement))
-
+        $('#mart').remove()
     })
+
+    $('#mart').remove()
  
 });
