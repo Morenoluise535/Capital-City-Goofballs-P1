@@ -23,10 +23,10 @@ This page uses the Edamam Nutrition Analysis API to grab information for every i
 There is also one last item that calculates the daily percentage of each category compared to the suggested daily allowance. The reset button will allow the user to erase all information and start their search and calculations again.
 
 # Map Page
-TWith this page, we decided to use Google Maps API - Places library. The map is going to populate at page load. The API comes with a search box inside the map. We customize the search box to be outside of the map to be more user friendly. 
+With this page, we decided to use Google Maps API - Places library. The map is going to populate at page load. The API comes with a search box inside the map. We customize the search box to be outside of the map to be more user friendly. 
 
 Features included in the map are:
-Search results will populate as markers on the map, as well as a list on the right of the map
+Search results will populate as markers on the map, as well as a list on the right of the page
 Clicking on a marker will display a popup window to display details of the location
 Clicking on a business will display a popup window on the map to display the details of that location
 Driving dirctions will bring user to Google map search page 
