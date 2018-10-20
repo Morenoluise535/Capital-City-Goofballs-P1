@@ -28,6 +28,8 @@ $( document ).ready(function() {
         name = $("#name-input").val().trim();
         message = $("#message-input").val().trim();
 
+
+
         $(".formess").append(   "<div class='conformess bard'>"+
                                 "<p>"+ name + "</p>"+
                                 "<p>" + message+ "</p>"+
@@ -87,7 +89,7 @@ $( document ).ready(function() {
     })
 
     database.ref().on("value", function(snapshot){
-        $("#formone").html($(snapshot.val().domelement))
+        $("#formone").replaceWith($(snapshot.val().domelement))
 
     })
  
