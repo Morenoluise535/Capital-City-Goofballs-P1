@@ -81,7 +81,8 @@ $( document ).ready(function() {
         
         var form = document.getElementById('formone');
         var domelement = form.outerHTML
-
+        $('#mart').remove()
+        
         database.ref().set({
             domelement: domelement,
         })
