@@ -38,7 +38,7 @@ $(document).ready(function () {
         
         .then(function(response) {
 
-            $(".infoRow").html("");
+            $("#recipeWrap").empty(".infoRow");
 
             for (let i = 0; i < response.hits.length; i++) {
 
