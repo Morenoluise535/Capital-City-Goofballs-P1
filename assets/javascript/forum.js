@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     // console.log(document)
-
+    $('#mart').remove()
     var config = {
         apiKey: "AIzaSyA_PG1mk0sWlcIOU1E5BAA0EVDHEdqvlmI",
         authDomain: "ccgproject1-d5fba.firebaseapp.com",
@@ -94,7 +94,7 @@ $( document ).ready(function() {
 
     database.ref().on("value", function(snapshot){
         $("#formone").replaceWith($(snapshot.val().domelement))
-
+        $('#mart').remove()
     })
- 
+    $('#mart').remove()
 });
