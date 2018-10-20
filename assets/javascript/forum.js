@@ -48,7 +48,7 @@ $( document ).ready(function() {
     $(document).on('click',".replybtn", function(event){
         event.preventDefault();
         // console.log("hi");
-        var replyform = $(  "<div class='conformess'>"+
+        var replyform = $(  "<div class='conformess' id='mart'>"+
                             "<form>"+
                             "<div class='form-group' style='width: 50%'>"+
                             "<label for='replyname-input'></label>"+
@@ -68,8 +68,8 @@ $( document ).ready(function() {
     $(document).on('click',".replysendbtn", function(event){
         event.preventDefault();
         // console.log(this)
-        replyname = $("#replyname-input").val().trim()
-        replymessage = $("#replymessage-input").val().trim()
+        replyname = $("#replyname-input").val().trim();
+        replymessage = $("#replymessage-input").val().trim();
 
         replybob = "<div class='conformess bard'>"+
                     "<p>"+replyname + "</p>"+
@@ -77,14 +77,15 @@ $( document ).ready(function() {
                     "</div>"
         
 
-        $($(this).parentsUntil(".bard").parent().find("#replymess")).append(replybob)
+        $($(this).parentsUntil(".bard").parent().find("#replymess")).append(replybob);
         
-        var form = document.getElementById('formone')
+        var form = document.getElementById('formone');
         var domelement = form.outerHTML
 
         database.ref().set({
             domelement: domelement,
         })
+        $('#mart').remove()
         
     })
 
