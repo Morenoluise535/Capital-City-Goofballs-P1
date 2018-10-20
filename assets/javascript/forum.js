@@ -73,6 +73,7 @@ $( document ).ready(function() {
                     "<p>"+replyname + "</p>"+
                     "<p>" +replymessage+ "</p>"+
                     "</div>"
+        
 
         $($(this).parentsUntil(".bard").parent().find("#replymess")).append(replybob)
         
@@ -86,7 +87,7 @@ $( document ).ready(function() {
     })
 
     database.ref().on("value", function(snapshot){
-        $("#formone").html($(snapshot.val().fart))
+        $("#formone").html($(snapshot.val().domelement))
 
     })
  
