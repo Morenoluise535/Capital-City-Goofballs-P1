@@ -17,7 +17,7 @@ $( document ).ready(function() {
     var replynum = 0;
     var name = "";
     var message = "";
-
+    var bigguess= "";
 
     $(".sendbtnprim").on('click', function(event){
         event.preventDefault();
@@ -26,24 +26,41 @@ $( document ).ready(function() {
         name = $("#name-input").val().trim();
         message = $("#message-input").val().trim();
 
-        dataRef.ref().push({
-            name: name,
-            message: message,
-            replynum: replynum,
-        });
+        bigguess =  "<div class='conformess bard'>"+
+                    "<p>"+name+ "</p>"+
+                    "<p>"+message+ "</p>"+
+                    "<div id='replymess'></div>"+
+                    "<div id='replyform'></div>"+
+                    "<button class='replybtn' data-renum='"+replynum+"'>Reply</button>"+
+                    "</div>"
+
+                    
+                    replyname = $("#replyname-input").val().trim()
+                    replymessage = $("#replymessage-input").val().trim()
+                    
+                    secondguess = "<div class='conformess bard'>"+
+                    "<p>"+ replyname + "</p>"+
+                    "<p>" + replymessage+ "</p>"+
+                    "</div>"
+                    
+                    $(".replysendbtn").on('click', function(event){
+                        event.preventDefault();
+                        console.log(this)
+                        // $($(this).parentsUntil(".bard").parent().find("#replymess")).append(secondguess)
+                    })
+                    
+                    // dataRef.ref().push({
+                    //     bigguess: bigguess,
+                    // });
     });
 
     dataRef.ref().on("child_added", function(childSnapshot) {
         // console.log(childSnapshot.val().name);
         // console.log(childSnapshot.val().message);
-        $(".formess").append(   "<div class='conformess bard'>"+
-                                "<p>"+ childSnapshot.val().name + "</p>"+
-                                "<p>" + childSnapshot.val().message+ "</p>"+
-                                "<div id='replymess'></div>"+
-                                "<div id='replyform'></div>"+
-                                "<button class='replybtn' data-renum='"+replynum+"'>Reply</button>"+
-                                "</div>")
+        $(".formess").append(childSnapshot.val().bigguess)
     });
+    
+    
     $(document).on('click',".replybtn", function(event){
         event.preventDefault();
         console.log("hi");
@@ -60,31 +77,45 @@ $( document ).ready(function() {
                             "<button class='replysendbtn' data-renum="+replynum+">Send</button>"+
                             "</form>"+
                             "</div>)")
-
         $($(this).parent().find("#replyform")).html(replyform) 
     });
+
     
-    $(document).on('click',".replysendbtn", function(event){
+    $(".replysendbtn").on('click', function(event){
         event.preventDefault();
         console.log(this)
+        // $($(this).parentsUntil(".bard").parent().find("#replymess")).append(secondguess)
         replyname = $("#replyname-input").val().trim()
         replymessage = $("#replymessage-input").val().trim()
-
-        replybob = "<div class='conformess bard'>"+
-                    "<p>"+replyname + "</p>"+
-                    "<p>" +replymessage+ "</p>"+
-                    "</div>"
-
-        $($(this).parentsUntil(".bard").parent().find("#replymess")).append(replybob)
         
-        // dataRef.ref().push({
-        //     replyname: replyname,
-        //     replymessage: replymessage
-        // })
-        // var boon = $(this).parentsUntil(".bard").parent().find("#replymess")
+        secondguess = "<div class='conformess bard'>"+
+                        "<p>"+ replyname + "</p>"+
+                        "<p>" + replymessage+ "</p>"+
+                        "</div>"
+
+        
+                        
+        dataRef.ref().push({
+        bigguess: bigguess,
+        });
     })
+    
+    // $(document).on('click',".replysendbtn", function(event){
+    //     event.preventDefault();
+    //     console.log(this)
+    //     replyname = $("#replyname-input").val().trim()
+    //     replymessage = $("#replymessage-input").val().trim()
+        
+    //     dataRef.ref().push({
+    //         replyname: replyname,
+    //         replymessage: replymessage
+    //     })
+
+    // })
 
     // dataRef.ref(replynum).on("child_added", function(childSnapshot) {
+
+
     //     $().append("<div class='conformess bard'>"+
     //     "<p>"+ childSnapshot.val().replyname + "</p>"+
     //     "<p>" + childSnapshot.val().replymessage+ "</p>"+
@@ -138,5 +169,3 @@ $( document ).ready(function() {
 
 //     })
 // });
-
-

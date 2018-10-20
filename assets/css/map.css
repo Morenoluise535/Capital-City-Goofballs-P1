@@ -4,27 +4,14 @@
       padding: 30px;
     }
 
-    #logo {
-      font-family: 'Indie Flower', cursive, sans-serif;
-      font-size: 42px;
-      font-weight: 1000;
-      color: green;
-      text-align: center;
-      text-decoration: none;
-      vertical-align:middle;
-      margin-left:20px;
-    }
-    #logoImg {
-      width:60px;
-      height:auto;
-    }
-    .collapse navbar-collapse {
-      float: right;
-    }
-    
-    .navbar-right {
-      float:right;
-    }
+    .navbar-light .navbar-nav .nav-link {
+      color: #4f7a0d;
+  }
+  
+  .navbar-light:hover .navbar-nav:hover .nav-link:hover {
+      font-weight: bold;
+      color: #4f7a0d;
+  }
 
 
     #map-section {
@@ -71,7 +58,7 @@
       float: left;
       font-weight: bold;
       position: absolute;
-      top: 290px;
+      top: 300px;
       left: 250px;
       font-size: 18px;
     }
