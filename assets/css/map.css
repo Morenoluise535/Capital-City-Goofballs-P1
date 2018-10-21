@@ -27,8 +27,9 @@
     #map {
       padding-right: 100px;
       margin-right: 100px;
+      padding-top: 100px;
       width: 55%;
-      height:600px;
+      height: 575px;
       float: right;
     }
 
@@ -72,7 +73,7 @@
     }
 
     #wrapper3 {
-      padding-top: 30px;
+      padding-top: 50px;
       padding-left: 100px;
       padding-right: 10px;
       height: 400px;
