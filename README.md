@@ -23,16 +23,16 @@ This page uses the Edamam Nutrition Analysis API to grab information for every i
 There is also one last item that calculates the daily percentage of each category compared to the suggested daily allowance. The reset button will allow the user to erase all information and start their search and calculations again.
 
 # Map Page
-With this page, we decided to use Google Maps API - Places library. The map is going to populate at page load. The API comes with a search box inside the map. We customize the search box to be outside of the map to be more user friendly. 
+With this page, we decided to use Google Maps API - Places library. The map is going to populate at page load. The API comes with a search box inside the map. We customize the search box to be outside of the map to be more user friendly. <br />
 
-Features included in the map are:
-Search results will populate as markers on the map, as well as a list on the right of the page
-Clicking on a marker will display a popup window to display details of the location
-Clicking on a business will display a popup window on the map to display the details of that location
-Driving dirctions will bring user to Google map search page 
-Features considered in the future:
-Driving directions will be on the map search page
-Business phone, hours, reviews will be included on the search results.
+Features included in the map are:<br />
+Search results will populate as markers on the map, as well as a list on the right of the page<br />
+Clicking on a marker will display a popup window to display details of the location<br />
+Clicking on a business will display a popup window on the map to display the details of that location<br />
+Driving dirctions will bring user to Google map search page <br />
+Features considered in the future:<br />
+Driving directions will be on the map search page<br />
+Business phone, hours, reviews will be included on the search results.<br />
 
 # Form Page
 This page uses firebase to store data and retrive it dynamically in order to creat a forum where a user can ask questions or state their facts/oppinions in regards to health
