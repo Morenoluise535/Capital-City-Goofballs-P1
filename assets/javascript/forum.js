@@ -27,6 +27,7 @@ $( document ).ready(function() {
     
         name = $("#name-input").val().trim();
         message = $("#message-input").val().trim();
+        document.getElementById('mart').remove()
 
 
 
@@ -49,6 +50,9 @@ $( document ).ready(function() {
     $(document).on('click',".replybtn", function(event){
         event.preventDefault();
         $('#mart').remove()
+
+        ocument.getElementById('mart').remove()
+
         // console.log("hi");
         var replyform = $(  "<div class='conformess' id='mart'>"+
                             "<form>"+
@@ -81,22 +85,33 @@ $( document ).ready(function() {
 
         $($(this).parentsUntil(".bard").parent().find("#replymess")).append(replybob);
         $('#mart').remove()
+        ocument.getElementById('mart').remove()
         var form = document.getElementById('formone');
         var domelement = form.outerHTML
 
         $('#mart').remove() 
+        document.getElementById('mart').remove()
         
         database.ref().set({
             domelement: domelement,
         })
         
         $('#mart').remove()
+        document.getElementById('mart').remove()
         
     })
 
     database.ref().on("value", function(snapshot){
         $("#formone").replaceWith($(snapshot.val().domelement))
         $('#mart').remove()
+
+        document.getElementById('mart').remove()
+    })
+    document.getElementById('mart').remove()
+    $('#mart').remove()
+ 
+
     })
     $('#mart').remove()
+
 });
